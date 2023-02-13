@@ -23,10 +23,11 @@ $(function () {
       $(this).addClass("present");
       //$(this).children(".description").addClass("white-text");
     } else if (currentHour < timeblock) {
-       $(this).removeClass("present");
+      $(this).removeClass("present");
       $(this).addClass("future");
     } else if (currentHour > timeblock) {
-       $(this).removeClass("future");
+      $(this).removeClass("present");
+      $(this).removeClass("future");
       $(this).addClass("past");
     }
   });
