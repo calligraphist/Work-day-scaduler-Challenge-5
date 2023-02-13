@@ -9,6 +9,15 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
+
+    //grabs values from time and value divs and saves them to local storage
+  // $(".saveBtn").click(function (event) {
+  //   event.preventDefault();
+  //   var time = $(this).parent().attr("id").split("-")[1];
+  //   var value = $(this).siblings(".time-block").val();
+  //   localStorage.setItem(time, value);
+  // });
+  
   //
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -17,7 +26,7 @@ $(function () {
   // current hour in 24-hour time?
   var currentHour = dayjs().format("HH");
   $(".time-block").each(function () {
-    var timeblock = $(this).attr("id").split("-")[1];
+    var timeblock = parseInt($(this).attr("id").split("-")[1]);
     
     if (currentHour == timeblock) {
       $(this).addClass("present");
@@ -25,11 +34,12 @@ $(function () {
     } else if (currentHour < timeblock) {
       $(this).removeClass("present");
       $(this).addClass("future");
-    } else if (currentHour > timeblock) {
-      $(this).removeClass("present");
-      $(this).removeClass("future");
+    } else 
+    //if (currentHour > timeblock) {
+    //   $(this).removeClass("present");
+    //   $(this).removeClass("future");
       $(this).addClass("past");
-    }
+   // }
   });
   
   //
@@ -49,22 +59,7 @@ $(function () {
   //   $("textarea").val("");
   //   localStorage.clear();
   // });
-  
-  //grabs hour from each time slot and compares it to actual time
-  // $(".time-block").each(function () {
-  //   var timeblock = $(this).attr("id").split("-")[1];
-    
-  //   if (currentHour == timeblock) {
-  //     $(this).addClass("present");
-  //     $(this).children(".description").addClass("white-text");
-  //   } else if (currentHour < timeblock) {
-  //      $(this).removeClass("present");
-  //     $(this).addClass("future");
-  //   } else if (currentHour > timeblock) {
-  //      $(this).removeClass("future");
-  //     $(this).addClass("past");
-  //   }
-  // });
+
   
   // //grabs values from time and value divs and saves them to local storage
   // $(".saveBtn").click(function (event) {
