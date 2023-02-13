@@ -12,9 +12,8 @@ challenge of the UNB bootcamp week 5
 
 ## Project Description 
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+This project is to create a work day scaduler that allows a user to save event for each hour of the day. Work hours are colour coded for past, current and comming hours. This app run in the browser and features dynamic HTML and CSS powered by jQuery.
+I use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
 
 
 ## Deployed Page link
@@ -25,6 +24,7 @@ You'll need to use the [Day.js](https://day.js.org/en/) library to work with dat
 The following animation demonstrates the application functionality:
 <!-- @TODO: create ticket to review/update image) -->
 ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+
 
 ## User Story
 
@@ -58,4 +58,3 @@ THEN the saved events persist
 
 - - -
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-# Work-day-scaduler-Challenge-5
