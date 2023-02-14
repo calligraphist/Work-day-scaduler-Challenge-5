@@ -18,7 +18,7 @@ I use the [Day.js](https://day.js.org/en/) library to work with date and time. B
 
 ## Deployed Page link
 
-
+https://calligraphist.github.io/Work-day-scaduler-Challenge-5/
 
 ## Mockup
 The following animation demonstrates the application functionality:
