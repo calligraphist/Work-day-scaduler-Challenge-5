@@ -9,14 +9,13 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-
-    //grabs values from time and value divs and saves them to local storage
-  // $(".saveBtn").click(function (event) {
-  //   event.preventDefault();
-  //   var time = $(this).parent().attr("id").split("-")[1];
-  //   var value = $(this).siblings(".time-block").val();
-  //   localStorage.setItem(time, value);
-  // });
+  $(".saveBtn").click(function (event) {
+    event.preventDefault();
+    var value = $(this).siblings(".description").val();
+    console.log(value)
+    var time = $(this).parent().attr("id").split("-")[1];
+    localStorage.setItem(time, value);
+  });
   
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -32,7 +31,7 @@ $(function () {
       $(this).addClass("present");
       //$(this).children(".description").addClass("white-text");
     } else if (currentHour < timeblock) {
-      $(this).removeClass("present");
+      //$(this).removeClass("present");
       $(this).addClass("future");
     } else 
     //if (currentHour > timeblock) {
@@ -50,7 +49,7 @@ $(function () {
   // TODO: Add code to display the current date in the header of the page.
   var now = dayjs().format('DD/MM/YYYY');
   var displayDate = document.getElementById("currentDay");
-  displayDate.innerHTML = now;
+      displayDate.innerHTML = now;
  
   
   // Button function to clear local storage and clear contents
@@ -61,22 +60,14 @@ $(function () {
   // });
 
   
-  // //grabs values from time and value divs and saves them to local storage
-  // $(".saveBtn").click(function (event) {
-  //   event.preventDefault();
-  //   var value = $(this).siblings(".time-block").val();
-  //   var time = $(this).parent().attr("id").split("-")[1];
-  //   localStorage.setItem(time, value);
-  // });
   
-  // //retrieves items from local storage and sets them in proper places
-  // $("#hour-09 .time-block").val(localStorage.getItem("09"));
-  // $("#hour-10 .time-block").val(localStorage.getItem("10"));
-  // $("#hour-11 .time-block").val(localStorage.getItem("11"));
-  // $("#hour-12 .time-block").val(localStorage.getItem("12"));
-  // $("#hour-13 .time-block").val(localStorage.getItem("13"));
-  // $("#hour-14 .time-block").val(localStorage.getItem("14"));
-  // $("#hour-15 .time-block").val(localStorage.getItem("15"));
-  // $("#hour-16 .time-block").val(localStorage.getItem("16"));
-  // $("#hour-17 .time-block").val(localStorage.getItem("17"));
+  // $("#hour-09 .description").val(localStorage.getItem("09"));
+  // $("#hour-10 .description").val(localStorage.getItem("10"));
+  // $("#hour-11 .description").val(localStorage.getItem("11"));
+  // $("#hour-12 .description").val(localStorage.getItem("12"));
+  // $("#hour-13 .description").val(localStorage.getItem("13"));
+  // $("#hour-14 .description").val(localStorage.getItem("14"));
+  // $("#hour-15 .description").val(localStorage.getItem("15"));
+  // $("#hour-16 .description").val(localStorage.getItem("16"));
+  // $("#hour-17 .description").val(localStorage.getItem("17"));
 });
