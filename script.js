@@ -36,7 +36,7 @@ $(function () {
   // To get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements
 
-  $("#hour-09 .description").val(localStorage.getItem("09"));
+  $("#hour-09 .description").val(localStorage.getItem("9"));
   $("#hour-10 .description").val(localStorage.getItem("10"));
   $("#hour-11 .description").val(localStorage.getItem("11"));
   $("#hour-12 .description").val(localStorage.getItem("12"));
