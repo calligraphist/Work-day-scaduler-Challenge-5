@@ -47,18 +47,8 @@ $(function () {
   $("#hour-17 .description").val(localStorage.getItem("17"));
 
   // display the current date in the header of the page.
-  var now = dayjs().format('DD/MM/YYYY');
+  var now = dayjs().format('dddd, DD/MM/YYYY');
   var displayDate = document.getElementById("currentDay");
       displayDate.innerHTML = now;
- 
-  
-  // Button function to clear local storage and clear contents
-  // $("#clearFieldsBtn").click(function (event) {
-  //   event.preventDefault;
-  //   $("textarea").val("");
-  //   localStorage.clear();
-  // });
 
-  
-  
 });
