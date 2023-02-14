@@ -22,7 +22,7 @@ https://calligraphist.github.io/Work-day-scaduler-Challenge-5/
 
 ## Mockup
 The following animation demonstrates the application functionality:
-<!-- @TODO: create ticket to review/update image) -->
+
 ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
 
 
@@ -53,8 +53,9 @@ THEN the saved events persist
 ```
 
 ## Contributions
-
-
+Starter code was provided by UNB with very well written todos. it make it easier to code with hints.
+Special thanks to my teacher assistant for the help.
+AskBCS Learning Assistant was very helpful in solving couple of bugs in my code.
 
 - - -
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
