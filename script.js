@@ -14,7 +14,7 @@ $(function () {
     localStorage.setItem(time, value);
   });
   
-  // Apply the past, present, or future class to each time
+  // Apply and removing the past, present, or future class to each time
   // block by comparing the id to the current hour.
 
   var currentHour = dayjs().format("HH");
@@ -25,6 +25,7 @@ $(function () {
       $(this).addClass("present");
     } else if (currentHour < timeblock) {
       $(this).removeClass("present");
+      $(this).removeClass("past");
       $(this).addClass("future");
     } else if (currentHour > timeblock) {
       $(this).removeClass("present");
@@ -50,5 +51,5 @@ $(function () {
   var now = dayjs().format('dddd, DD/MM/YYYY');
   var displayDate = document.getElementById("currentDay");
       displayDate.innerHTML = now;
-
+ 
 });
